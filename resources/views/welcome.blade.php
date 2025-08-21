@@ -87,10 +87,10 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <a
                             href="/parent-child-random-key"
-                            class="block p-6 bg-purple-50 hover:bg-purple-100 hover:shadow-lg border border-purple-200 rounded-lg transition duration-200 cursor-pointer transform hover:scale-105"
+                            class="block p-6 bg-red-50 hover:bg-red-100 hover:shadow-lg border border-red-200 rounded-lg transition duration-200 cursor-pointer transform hover:scale-105"
                         >
-                            <h3 class="text-lg font-semibold text-purple-700 mb-3">Child with RANDOM wire:key</h3>
-                            <p class="text-sm text-purple-600 mb-3 font-medium">BROKEN COMMUNICATION</p>
+                            <h3 class="text-lg font-semibold text-red-700 mb-3">Child with RANDOM wire:key</h3>
+                            <p class="text-sm text-red-600 mb-3 font-medium">BROKEN COMMUNICATION</p>
                             <p class="text-sm text-gray-600">Child sends events to parent, but random keys cause component re-initialization and console errors on button clicks.</p>
                         </a>
 

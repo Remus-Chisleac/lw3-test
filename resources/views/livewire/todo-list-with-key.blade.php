@@ -111,7 +111,7 @@
         </div>
     </div>
 
-    <div wire:ignore class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-md max-w-4xl">
+    <div wire:ignore class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-md">
         <h4 class="font-semibold text-gray-800 mb-3">Code Structure:</h4>
 
         <div class="mb-4">

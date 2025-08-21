@@ -2,7 +2,7 @@
     <div class="mb-6 flex gap-2 flex-wrap">
         <a 
             href="/refresh-with-ignore" 
-            class="px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded text-sm font-semibold transition duration-200"
+            class="px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200"
         >
             WITH wire:ignore.self
         </a>

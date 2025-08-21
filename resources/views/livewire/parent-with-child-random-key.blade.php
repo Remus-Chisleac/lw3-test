@@ -1,6 +1,6 @@
 <div class="max-w-7xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
     <div class="mb-6 flex gap-2 flex-wrap">
-        <button class="px-3 py-2 bg-purple-500 text-white rounded text-sm font-semibold">
+        <button class="px-3 py-2 bg-red-500 text-white rounded text-sm font-semibold">
             CHILD with RANDOM key (Current)
         </button>
         <a
@@ -11,7 +11,7 @@
         </a>
     </div>
 
-    <h2 class="text-2xl font-bold mb-4 text-purple-600">Child-to-Parent with Random wire:key</h2>
+    <h2 class="text-2xl font-bold mb-4 text-red-600">Child-to-Parent with Random wire:key</h2>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <!-- Parent and Child Components ---->
@@ -44,8 +44,8 @@
             </div>
 
             <!-- Child Component with Random Key -->
-            <div class="p-4 bg-purple-50 border border-purple-200 rounded-lg">
-                <h4 class="text-md font-semibold text-purple-700 mb-3">Child Component (Random Key)</h4>
+            <div class="p-4 bg-red-50 border border-red-200 rounded-lg">
+                <h4 class="text-md font-semibold text-red-700 mb-3">Child Component (Random Key)</h4>
                 <livewire:child-with-random-key />
             </div>
         </div>
@@ -53,30 +53,30 @@
         <!-- Test Instructions Sidebar -->
         <div class="lg:col-span-1">
             <div class="sticky top-4">
-                <div class="p-4 bg-purple-50 border border-purple-200 rounded-md">
-                    <h4 class="font-semibold text-purple-800 text-lg mb-3">Test Instructions</h4>
-                    <ol class="text-sm text-purple-700 space-y-2">
+                <div class="p-4 bg-red-50 border border-red-200 rounded-md">
+                    <h4 class="font-semibold text-red-800 text-lg mb-3">Test Instructions</h4>
+                    <ol class="text-sm text-red-700 space-y-2">
                         <li class="flex items-start">
-                            <span class="flex-shrink-0 w-5 h-5 bg-purple-200 text-purple-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">1</span>
+                            <span class="flex-shrink-0 w-5 h-5 bg-red-200 text-red-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">1</span>
                             <span>Open the browser console (Right click → Inspect → Console tab)</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="flex-shrink-0 w-5 h-5 bg-purple-200 text-purple-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">2</span>
+                            <span class="flex-shrink-0 w-5 h-5 bg-red-200 text-red-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">2</span>
                             <span>Type a message in the child component input field</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="flex-shrink-0 w-5 h-5 bg-purple-200 text-purple-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">3</span>
+                            <span class="flex-shrink-0 w-5 h-5 bg-red-200 text-red-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">3</span>
                             <span>Click "Send to Parent" button</span>
                         </li>
                         <li class="flex items-start">
-                            <span class="flex-shrink-0 w-5 h-5 bg-purple-200 text-purple-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">4</span>
+                            <span class="flex-shrink-0 w-5 h-5 bg-red-200 text-red-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">4</span>
                             <span>Check the error message in the console</span>
                         </li>
                     </ol>
 
-                    <div class="mt-4 p-3 bg-red-50 border border-red-200 rounded-md">
-                        <h5 class="text-sm font-semibold text-red-800 mb-2">What's Happening:</h5>
-                        <p class="text-xs text-red-700 leading-relaxed">
+                    <div class="mt-4 p-3 bg-orange-50 border border-orange-200 rounded-md">
+                        <h5 class="text-sm font-semibold text-orange-800 mb-2">What's Happening:</h5>
+                        <p class="text-xs text-orange-700 leading-relaxed">
                             When you click "Send to Parent", the button triggers <code>wire:click="sendMessage"</code>.
                             However, the random <code>wire:key="{{ rand() }}"</code> causes the child component to get a new ID.
                             Livewire then tries to find the old component ID to execute the click handler, but it no longer exists,
@@ -89,12 +89,12 @@
         </div>
     </div>
 
-    <div wire:ignore class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-md max-w-4xl">
+    <div wire:ignore class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-md">
         <h4 class="font-semibold text-gray-800 mb-3">Code Structure:</h4>
 
         <div class="mb-4">
             <h5 class="font-medium text-gray-700 mb-2">Parent Component:</h5>
-            <pre class="text-sm bg-gray-900 text-gray-100 p-4 rounded border overflow-x-auto"><code class="language-php">class ParentWithChildRandomKey extends Component
+            <pre class="text-sm bg-gray-900 text-gray-100 p-4 rounded border overflow-x-auto"><code class="language-php">class Parent extends Component
 {
     public $receivedMessages = [];
     public $messageCount = 0;
@@ -145,7 +145,7 @@
 
 &lt;!-- Parent includes child --&gt;
 &lt;livewire:child-with-random-key /&gt;</code></pre>
-            <p class="text-sm text-purple-600 mt-2 font-medium">BROKEN: Random wire:key causes child components to re-initialize on every parent update!</p>
+            <p class="text-sm text-red-600 mt-2 font-medium">BROKEN: Random wire:key causes child components to re-initialize on every parent update!</p>
         </div>
     </div>
 </div>

@@ -2,7 +2,7 @@
     <div class="mb-6 flex gap-2 flex-wrap">
         <a
             href="/parent-child-random-key"
-            class="px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded text-sm font-semibold transition duration-200"
+            class="px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200"
         >
             CHILD with RANDOM key
         </a>
@@ -85,12 +85,12 @@
         </div>
     </div>
 
-    <div wire:ignore class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-md max-w-4xl">
+    <div wire:ignore class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-md">
         <h4 class="font-semibold text-gray-800 mb-3">Code Structure:</h4>
 
         <div class="mb-4">
             <h5 class="font-medium text-gray-700 mb-2">Parent Component:</h5>
-            <pre class="text-sm bg-gray-900 text-gray-100 p-4 rounded border overflow-x-auto"><code class="language-php">class ParentWithChildWithoutKey extends Component
+            <pre class="text-sm bg-gray-900 text-gray-100 p-4 rounded border overflow-x-auto"><code class="language-php">class Parent extends Component
 {
     public $receivedMessages = [];
     public $messageCount = 0;
