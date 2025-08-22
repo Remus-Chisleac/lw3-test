@@ -16,16 +16,16 @@
             RANDOM wire:key (Current)
         </button>
         <a
-            href="/todo-complex"
-            class="px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded text-sm font-semibold transition duration-200"
-        >
-            NESTED COMPONENTS
-        </a>
-        <a
             href="/todo-partial-key"
             class="px-3 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded text-sm font-semibold transition duration-200"
         >
             PARTIAL KEY
+        </a>
+        <a
+            href="/todo-complex"
+            class="px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded text-sm font-semibold transition duration-200"
+        >
+            NESTED COMPONENTS
         </a>
     </div>
 
