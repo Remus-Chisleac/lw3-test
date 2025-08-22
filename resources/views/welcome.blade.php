@@ -22,7 +22,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                             <h4 class="text-md font-semibold text-blue-700 mb-2">Why</h4>
-                            <p class="text-sm text-gray-600">Helps Livewire track DOM elements correctly during updates, preventing state mixups and improving performance.</p>
+                            <p class="text-sm text-gray-600">It helps Livewire track DOM elements correctly during updates, preventing state mixups and improving performance.</p>
                         </div>
 
                         <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
@@ -37,7 +37,7 @@
 
                         <div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
                             <h4 class="text-md font-semibold text-blue-700 mb-2">How</h4>
-                            <p class="text-sm text-gray-600">Use wire:key="unique-identifier" with stable values like IDs. The identifier must be unique on the entire rendered page.</p>
+                            <p class="text-sm text-gray-600">Use wire:key="unique-identifier" with stable values like entity IDs. Ex: wire:key="todo-&#123;&#123;$todo['id']&#125;&#125;"</p>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,8 @@
 
                     <p class="text-gray-600 mb-6">Click on each example to see live demo:</p>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Basic Examples Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                         <a
                             href="/todo-without-key"
                             class="block p-6 bg-red-50 hover:bg-red-100 hover:shadow-lg border border-red-200 rounded-lg transition duration-200 cursor-pointer transform hover:scale-105"
@@ -74,6 +75,25 @@
                             <h3 class="text-lg font-semibold text-orange-700 mb-3">RANDOM wire:key</h3>
                             <p class="text-sm text-orange-600 mb-3 font-medium">WORST</p>
                             <p class="text-sm text-gray-600">Using rand() causes complete DOM regeneration. Every action scrambles input values.</p>
+                        </a>
+                    </div>
+
+                    <!-- Advanced Examples Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <a
+                            href="/todo-partial-key"
+                            class="block p-6 bg-yellow-50 hover:bg-yellow-100 hover:shadow-lg border border-yellow-200 rounded-lg transition duration-200 cursor-pointer transform hover:scale-105"
+                        >
+                            <h3 class="text-lg font-semibold text-yellow-700 mb-3">NESTED COMPONENTS PARTIAL KEY</h3>
+                            <p class="text-sm text-gray-600">wire:key only on Livewire component, divs without keys cause DOM state mixing.</p>
+                        </a>
+
+                        <a
+                            href="/todo-complex"
+                            class="block p-6 bg-purple-50 hover:bg-purple-100 hover:shadow-lg border border-purple-200 rounded-lg transition duration-200 cursor-pointer transform hover:scale-105"
+                        >
+                            <h3 class="text-lg font-semibold text-purple-700 mb-3">NESTED COMPONENTS</h3>
+                            <p class="text-sm text-gray-600">wire:key on Livewire component and the root div.</p>
                         </a>
                     </div>
                 </section>
@@ -112,7 +132,7 @@
                     <div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div class="text-center p-4 bg-white rounded-lg shadow-sm">
-                                <div class="text-3xl font-bold text-blue-600 mb-2">1,424</div>
+                                <div class="text-3xl font-bold text-blue-600 mb-2">1,405</div>
                                 <div class="text-sm text-gray-600">Total wire:key attributes</div>
                                 <div class="text-xs text-gray-500 mt-1">Outside of @@foreach loops</div>
                             </div>
@@ -126,13 +146,16 @@
 
                         <div class="text-center p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
                             <p class="text-lg font-semibold text-yellow-800 mb-2">
-                                Do your part, stop using random keys, be decisive!
+                                Do your part, stop using random keys!
                             </p>
                             <p class="text-sm text-yellow-700 mb-2">
                                 Random keys break component state and cause unnecessary re-renders. Use stable, meaningful identifiers instead.
                             </p>
-                            <p class="text-sm text-yellow-700">
+                            <p class="text-sm text-yellow-700 mb-2">
                                 <strong>Migration Impact:</strong> The Livewire 3 migration is made harder by these random keys, as each one needs to be analyzed and replaced manually.
+                            </p>
+                            <p class="text-sm text-yellow-700">
+                                <strong>Note:</strong> The collected statistics might not be 100% accurate because aico includes legacy/unused pages that are still tracked in the repository.
                             </p>
                         </div>
                     </div>

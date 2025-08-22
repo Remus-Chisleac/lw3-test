@@ -1,5 +1,5 @@
 <div class="max-w-7xl mx-auto mt-8 p-6 bg-white rounded-lg shadow-lg">
-    <div class="mb-6 flex gap-2">
+    <div class="mb-6 flex gap-2 flex-wrap">
         <a
             href="/todo-without-key"
             class="px-3 py-2 bg-red-500 hover:bg-red-600 text-white rounded text-sm font-semibold transition duration-200"
@@ -15,6 +15,18 @@
         <button class="px-3 py-2 bg-orange-500 text-white rounded text-sm font-semibold">
             RANDOM wire:key (Current)
         </button>
+        <a
+            href="/todo-complex"
+            class="px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded text-sm font-semibold transition duration-200"
+        >
+            NESTED COMPONENTS
+        </a>
+        <a
+            href="/todo-partial-key"
+            class="px-3 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded text-sm font-semibold transition duration-200"
+        >
+            PARTIAL KEY
+        </a>
     </div>
 
     <h2 class="text-2xl font-bold mb-4 text-orange-600">WITH wire:key using rand() (BROKEN)</h2>

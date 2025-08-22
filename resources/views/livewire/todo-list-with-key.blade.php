@@ -15,6 +15,18 @@
         >
             RANDOM wire:key
         </a>
+        <a
+            href="/todo-complex"
+            class="px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded text-sm font-semibold transition duration-200"
+        >
+            NESTED COMPONENTS
+        </a>
+        <a
+            href="/todo-partial-key"
+            class="px-3 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded text-sm font-semibold transition duration-200"
+        >
+            PARTIAL KEY
+        </a>
     </div>
 
     <h2 class="text-2xl font-bold mb-4 text-green-600">WITH wire:key (CORRECT)</h2>

@@ -58,7 +58,7 @@
                     <ol class="text-sm text-red-700 space-y-2">
                         <li class="flex items-start">
                             <span class="flex-shrink-0 w-5 h-5 bg-red-200 text-red-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">1</span>
-                            <span>Open the browser console (Right click → Inspect → Console tab)</span>
+                            <span>Open the browser console (F12)</span>
                         </li>
                         <li class="flex items-start">
                             <span class="flex-shrink-0 w-5 h-5 bg-red-200 text-red-800 rounded-full text-xs flex items-center justify-center mr-2 mt-0.5">2</span>
